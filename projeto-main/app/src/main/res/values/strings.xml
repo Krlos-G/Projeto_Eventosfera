@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">projeto01</string>
+    <string name="prompt_estado">Filtrar por Estado</string>
+    <string name="prompt_cidade">Filtrar por Cidade</string>
+<!--    <string name="prompt_bairro">Bairro</string> &lt;!&ndash; Mantido, mas não usaremos para filtro agora &ndash;&gt;-->
+    <string name="prompt_tipo_evento">Filtrar por Tipo de Evento</string>
+
+    <string-array name="tipos_evento_array">
+        <item>Selecione o Tipo de Evento</item>
+        <item>Musical</item>
+        <item>Religioso</item>
+        <item>Esportivo</item>
+        <item>Cultural</item>
+        <item>Corporativo</item>
+        <item>Outro</item>
+    </string-array>
+
+    <string-array name="estados_array_filtro">
+        <item>Todos os Estados</item> <!-- Opção para limpar filtro de estado -->
+        <item>GO</item>
+        <!-- Adicionar outros estados aqui no futuro -->
+    </string-array>
+
+    <string-array name="cidades_array_filtro_go">
+        <item>Todas as Cidades (GO)</item> <!-- Opção para limpar filtro de cidade -->
+        <item>Goiânia</item>
+        <item>Rio Verde</item>
+        <!-- Adicionar outras cidades de GO aqui no futuro -->
+    </string-array>
+
+    <string name="selecione_estado">Selecione o estado</string>
+    <string name="selecione_cidade">Selecione a cidade</string>
+
+    <!-- Você pode adicionar arrays para cidades de outros estados se necessário no futuro -->
+    <string-array name="cidades_array_filtro_vazio">
+        <item>Selecione um estado primeiro</item>
+    </string-array>
+
+</resources>

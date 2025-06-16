@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".CriarEventoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etEventName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Nome do Evento"
+            android:inputType="textCapWords"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:autofillHints="name" />
+
+        <EditText
+            android:id="@+id/etEventDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Descrição do Evento"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etEventName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Spinner para Tipo de Evento -->
+        <Spinner
+            android:id="@+id/spinnerEventType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etEventDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etStartDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Data de Início (dd/MM/yyyy)"
+            android:focusable="false"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/spinnerEventType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etStartTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Hora de Início (HH:mm)"
+            android:focusable="false"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etStartDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etEndDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Data Final (dd/MM/yyyy)"
+            android:focusable="false"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etStartTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etEndTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Hora de Fim (HH:mm)"
+            android:focusable="false"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etEndDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etRua"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Rua"
+            android:inputType="textPostalAddress"
+            android:minHeight="48dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etEndTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etNumero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Número"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etRua"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etComplemento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Complemento"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etNumero"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etBairro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Bairro"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etComplemento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etCEP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="CEP"
+            android:inputType="number"
+            android:maxLength="8"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etBairro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Spinner
+            android:id="@+id/etEstado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Estado (UF)"
+            android:inputType="textCapCharacters"
+            android:maxLength="2"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etCEP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Spinner
+            android:id="@+id/etCidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Cidade"
+            android:inputType="textCapWords"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etEstado"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <EditText
+            android:id="@+id/etLatitude"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Latitude (Opcional)"
+            android:inputType="numberSigned|numberDecimal"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/etCidade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etLongitude"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Longitude (Opcional)"
+            android:inputType="numberSigned|numberDecimal"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/etLatitude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvImagensLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imagens do Evento (Máx. 6)"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/etLongitude"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnAddImagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adicionar Imagem"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvImagensLabel"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvImages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/btnAddImagem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp"
+            tools:listitem="@layout/item_imagem_removable"
+            tools:itemCount="3"
+            tools:layoutManager="GridLayoutManager"
+            tools:spanCount="3"/>
+
+        <Button
+            android:id="@+id/btnSalvarEvento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Salvar Evento"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@id/rvImages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
