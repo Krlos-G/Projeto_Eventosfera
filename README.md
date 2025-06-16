@@ -9,7 +9,6 @@ Bem-vindo ao **Projeto Eventosfera**! Este repositório é dedicado ao desenvolv
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Pré-requisitos](#pré-requisitos)
 - [Como Rodar o Projeto](#como-rodar-o-projeto)
-- [Estrutura do Projeto](#estrutura-do-projeto)
 - [Contribuição](#contribuição)
 - [Contato](#contato)
 
@@ -61,20 +60,6 @@ cp .env.example .env
 
 # Inicie a aplicação
 npm start
-```
-
-## Estrutura do Projeto
-
-```
-Projeto_Eventosfera/
-│
-├── backend/             # Código fonte do backend
-├── frontend/            # Código fonte do frontend
-├── docs/                # Documentação
-├── scripts/             # Scripts auxiliares
-├── .env.example         # Exemplo de variáveis de ambiente
-├── package.json         # Dependências e scripts (Node)
-└── README.md            # Documentação principal
 ```
 
 ## Contribuição
