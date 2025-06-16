@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-db-evento-comunitario
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 126961Barbos@
+      MYSQL_DATABASE: db_evento_comunitario # Nome do banco de dados
+      MYSQL_USER: event_user # Usuário para a aplicação
+      MYSQL_PASSWORD: 126961 # Senha para a aplicação
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
